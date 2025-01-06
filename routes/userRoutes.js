@@ -9,3 +9,5 @@ router.post('/register', register);
 router.post('/login', login);
 router.get('/logout',isUserAuthenticated, logout);
 router.get('/profile', isUserAuthenticated, getUserProfile);
+
+module.exports = router;
