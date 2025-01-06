@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const UserRoutes = require('./routes/userRoutes')
 // const cookieParser = require('cookie-parser');
 const dbConnection = require('./database/dbConnection');
 
@@ -19,6 +20,7 @@ const PORT = process.env.PORT || 6000;
 
 
 //routes
+app.use('api/v1/auth', UserRoutes);
 
 
 
